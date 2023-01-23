@@ -44,7 +44,7 @@ for(let i=0; i<x; i++){
 }}
     console.log(h/x);
 }
-function convertToNumber(str){
+function convertToNumberx(str){
     let fcc = 1;
     let ans = 0;
     stgg = str.length;
