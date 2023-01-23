@@ -36,11 +36,11 @@ function convertToNumber(str){
 }
 function getViews(x){
 let h = 0;
-for(let i=0; i<x; i++)
+for(let i=0; i<x; i++){
     try{
-    h += convertToNumber(document.querySelectorAll("ytd-rich-item-renderer")[i].childNodes[1].childNodes[0].childNodes[1].childNodes[2].childNodes[1].childNodes[1].childNodes[2].childNodes[3].childNodes[6].innerHTML));
+    h += convertToNumber(document.querySelectorAll("ytd-rich-item-renderer")[i].childNodes[1].childNodes[0].childNodes[1].childNodes[2].childNodes[1].childNodes[1].childNodes[2].childNodes[3].childNodes[6].innerHTML);
     }catch{
         let fdsa = 0;
-}
+}}
     console.log(h/x);
-    }
+}
