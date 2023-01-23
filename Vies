@@ -1,0 +1,46 @@
+function convertToNumber(str){
+    let fc = 1;
+    for(let i=0; i<str.length; i++){
+        switch(str[i]){
+            case "K":
+                fc *= 1000;
+                break;
+            case "M":
+                fc *= 1000000;
+                break;
+            case "B":
+                fc *= 1000000000;
+                break;
+            default:
+                break;
+        }
+    }
+    var n = 1;
+    for(let i = 0; i<1; i++){
+        let c = 0;
+        switch(str[1]){
+            case ".":
+                c = ((parseInt(str[0]) * fc) + (parseInt(str[2]) * (fc/10)));
+                break;
+            case ",":
+                c = ((parseInt(str[0]) * 1000) + ((parseInt(str[2]) * 100)) + ((parseInt(str[3]) * 10)) + (parseInt(str[4])));
+                break;
+            default:
+                c = ((parseInt(str.substring(0,(str.length-7))))*fc);
+                break;
+        }
+        n = c;
+    }
+    
+    return n;
+}
+function getViews(x){
+let h = 0;
+for(let i=0; i<x; i++)
+    try{
+    h += convertToNumber(document.querySelectorAll("ytd-rich-item-renderer")[i].childNodes[1].childNodes[0].childNodes[1].childNodes[2].childNodes[1].childNodes[1].childNodes[2].childNodes[3].childNodes[6].innerHTML));
+    }catch{
+        let fdsa = 0;
+}
+    console.log(h/x);
+    }
