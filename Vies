@@ -44,3 +44,135 @@ for(let i=0; i<x; i++){
 }}
     console.log(h/x);
 }
+function convertToNumber(str){
+    let fcc = 1;
+    let ans = 0;
+    stgg = str.length;
+    try{
+        if(str.substring(stgg-10, stgg) == "months ago"){
+            ans = parseInt(str.substring(0, stgg-11)) * 30 * 84600;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+    try{
+        if(str.substring(stgg-9, stgg) == "month ago"){
+            ans = 30 * 84600;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+    try{
+        if(str.substring(stgg-8, stgg) == "days ago"){
+            ans = parseInt(str.substring(0, stgg-9)) * 84600;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+        try{
+        if(str.substring(stgg-7, stgg) == "day ago"){
+            ans = 84600;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+    try{
+        if(str.substring(stgg-8, stgg) == "year ago"){
+            ans = 365 * 84600;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+    try{
+        if(str.substring(stgg-9, stgg) == "years ago"){
+            ans = parseInt(str.substring(0, stgg-10)) * 365 * 84600;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+    try{
+        if(str.substring(stgg-8, stgg) == "hour ago"){
+            ans = 3600;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+try{
+        if(str.substring(stgg-9, stgg) == "hours ago"){
+            ans = parseInt(str.substring(0, stgg-10)) * 3600;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+try{
+        if(str.substring(stgg-10, stgg) == "minute ago"){
+            ans = 60;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+try{
+        if(str.substring(stgg-11, stgg) == "minutes ago"){
+            ans = parseInt(str.substring(0, stgg-12)) * 60;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+try{
+        if(str.substring(stgg-10, stgg) == "second ago"){
+            ans = 1;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+try{
+        if(str.substring(stgg-11, stgg) == "seconds ago"){
+            ans = parseInt(str.substring(0, stgg-12));
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+    try{
+        if(str.substring(stgg-8, stgg) == "week ago"){
+            ans = 84600*7;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+try{
+        if(str.substring(stgg-9, stgg) == "weeks ago"){
+            ans = parseInt(str.substring(0, stgg-10)) * 84600*7;
+        }else{
+            let ui = 0;
+        }
+    }catch{
+        let ui = 0;
+    }
+    return ans/84600;
+}
